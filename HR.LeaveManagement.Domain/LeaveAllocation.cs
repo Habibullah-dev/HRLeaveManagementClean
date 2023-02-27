@@ -12,4 +12,6 @@ public class LeaveAllocation : BaseEntity
 
     public int Period { get; set; }
 
+    public string EmployeeId { get; set; } 
+
 }
