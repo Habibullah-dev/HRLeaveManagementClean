@@ -27,7 +27,6 @@ namespace HR.LeaveManagement.Persistence.DatabaseContext
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(HrDatabaseContext).Assembly);
 
-
             base.OnModelCreating(modelBuilder);
 
         }
