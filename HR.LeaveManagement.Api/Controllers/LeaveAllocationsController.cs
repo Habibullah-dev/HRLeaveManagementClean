@@ -79,7 +79,7 @@ namespace HR.LeaveManagement.Api.Controllers
         [ProducesDefaultResponseType]
         public async Task<IActionResult> Delete(int id)
         {
-            var command = new DeleteLeaveCommandAllocationCommand { Id = id };
+            var command = new DeleteLeaveAllocationCommand { Id = id };
             await _mediator.Send(command);
 
             return NoContent();

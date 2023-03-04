@@ -14,10 +14,10 @@ namespace HR.LeaveManangement.Application.Features.LeaveType.Commands.UpdateLeav
     public class UpdateLeaveTypeCommandHandler : IRequestHandler<UpdateLeaveTypeCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly ILeaveAllocationRepository _leaveTypeRepository;
+        private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IAppLogger<UpdateLeaveTypeCommandHandler> _logger;
 
-        public UpdateLeaveTypeCommandHandler(IMapper mapper , ILeaveAllocationRepository leaveTypeRepository, IAppLogger<UpdateLeaveTypeCommandHandler> logger)
+        public UpdateLeaveTypeCommandHandler(IMapper mapper , ILeaveTypeRepository leaveTypeRepository, IAppLogger<UpdateLeaveTypeCommandHandler> logger)
         {
             _mapper = mapper;
             _leaveTypeRepository = leaveTypeRepository;

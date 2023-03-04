@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Domain;
+using HR.LeaveManangement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation;
 using HR.LeaveManangement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocationDetail;
 using HR.LeaveManangement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocations;
 using HR.LeaveManangement.Application.Features.LeaveType.Commands.CreateLeaveType;
