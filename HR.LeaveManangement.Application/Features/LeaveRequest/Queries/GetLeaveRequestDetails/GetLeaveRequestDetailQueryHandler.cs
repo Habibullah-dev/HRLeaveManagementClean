@@ -11,18 +11,22 @@ namespace HR.LeaveManangement.Application.Features.LeaveRequest.Queries.GetLeave
 {
     public class GetLeaveRequestDetailQueryHandler : IRequestHandler<GetLeaveRequestDetailQuery, LeaveRequestDetailsDto>
     {
-        private readonly ILeaveAllocationRepository _leaveAllocationRepository;
+        private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
 
-        public GetLeaveAllocationDetailsHandler(ILeaveAllocationRepository leaveAllocationRepository, IMapper mapper)
+        public GetLeaveRequestDetailQueryHandler(ILeaveRequestRepository leaveRequestRepository, IMapper mapper)
         {
-            this._leaveAllocationRepository = leaveAllocationRepository;
+            this._leaveRequestRepository = leaveRequestRepository;
             this._mapper = mapper;
         }
 
-        public Task<LeaveRequestDetailsDto> Handle(GetLeaveRequestDetailQuery request, CancellationToken cancellationToken)
+        public async Task<LeaveRequestDetailsDto> Handle(GetLeaveRequestDetailQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var leaveRequest = _mapper.Map<LeaveRequestDetailsDto>(await _leaveRequestRepository.GetLeaveRequestWithDetails(request.Id));
+
+            //Add Employee Detail
+
+            return leaveRequest;
         }
     }
 }

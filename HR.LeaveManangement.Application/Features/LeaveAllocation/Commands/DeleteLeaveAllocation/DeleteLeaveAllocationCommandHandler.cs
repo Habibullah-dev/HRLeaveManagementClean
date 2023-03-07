@@ -27,7 +27,7 @@ namespace HR.LeaveManangement.Application.Features.LeaveAllocation.Commands.Dele
 
             if (leaveAllocation == null)
             {
-                throw new NotFoundException(nameof(leaveAllocation), request.Id);
+                throw new NotFoundException(nameof(LeaveAllocation), request.Id);
             }
 
             await _leaveAllocationRepository.DeleteAsync(leaveAllocation);
